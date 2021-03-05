@@ -55,6 +55,12 @@
       C) cd into site
       D) Run 'gatsby build'
       D) Run 'gatsby develop'
-      E) Upload to github
+      E) Run 'git init'
+      F) Run 'git add -A'
+      G) Run 'git commit -m "insert message here"
+      H) Run 'git checkout -b newBranchName
+      I) Run 'git remote add origin git@github.com:username/emptyRepoName.git'
+      J) Run git push origin newBranchName
+      
 
     
