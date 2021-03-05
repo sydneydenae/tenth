@@ -61,6 +61,19 @@
       H) Run 'git checkout -b newBranchName
       I) Run 'git remote add origin git@github.com:username/emptyRepoName.git'
       J) Run git push origin newBranchName
+
+    2. Enable branch protection
+      A) Go to gitHub
+      B) Click on repoName
+      D) Click settings button
+      E) Make sure the name of the default branch is main
+      F) Scroll down to Branch Protection Rules section
+      G) Select 'Add rule'
+      F) Type in branch name
+      G) Check the box of 'Require pull request reviews before merging' *I use this to block from submitting to main*
+      
+
+      
       
 
     
