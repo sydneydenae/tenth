@@ -95,3 +95,7 @@
       B) Look for other rules you want to implement
       C) Enter them in the rules section of eslintrc.json
       D) Find the correct format by looking at the specific rule
+
+    6. Add Tailwindcss
+     A) Run 'npm install tailwindcss@latest'
+     B) Run 'npx tailwindcss init'
