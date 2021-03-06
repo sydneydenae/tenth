@@ -62,7 +62,7 @@
       I) Run 'git remote add origin git@github.com:username/emptyRepoName.git'
       J) Run git push origin newBranchName
 
-    2. Enable branch protection
+    2. Enable branch protection (I've taken this off for now since I'm the only contributor)
       A) Go to gitHub
       B) Click on repoName
       D) Click settings button
