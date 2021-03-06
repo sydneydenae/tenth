@@ -79,6 +79,19 @@
       D) Add  "test": "jest" to scripts section of package.json
       E) Run 'npm run test'
 
+    4. Set up ES linter https://eslint.org/docs/user-guide/getting-started
+     A) Run 'npm install eslint --save-dev'
+     B) Run 'npx eslint --init' to set up config file
+     C) Select Check syntax and find problems
+     D) Select JavaScript modules
+     E) Select React
+     F) Select No
+     G) Select Browser
+     H) Select JSON
+     I) Select Yes
+
+
+
       
 
       
