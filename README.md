@@ -79,7 +79,7 @@
       D) Add  "test": "jest" to scripts section of package.json
       E) Run 'npm run test'
 
-    4. Set up ES linter https://eslint.org/docs/user-guide/getting-started
+    4. Set up ESLint https://eslint.org/docs/user-guide/getting-started
      A) Run 'npm install eslint --save-dev'
      B) Run 'npx eslint --init' to set up config file
      C) Select Check syntax and find problems
@@ -90,11 +90,8 @@
      H) Select JSON
      I) Select Yes
 
-
-
-      
-
-      
-      
-
-    
+    5. Set up ESLint rules https://eslint.org/docs/rules/
+      A) ESLint recommended rules are already implemented
+      B) Look for other rules you want to implement
+      C) Enter them in the rules section of eslintrc.json
+      D) Find the correct format by looking at the specific rule

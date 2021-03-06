@@ -18,5 +18,7 @@
         "react"
     ],
     "rules": {
+        "vars-on-top": ["error"],
+        "block-scoped-var": ["error"]
     }
 }
