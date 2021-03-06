@@ -80,15 +80,15 @@
       E) Run 'npm run test'
 
     4. Set up ESLint https://eslint.org/docs/user-guide/getting-started
-     A) Run 'npm install eslint --save-dev'
-     B) Run 'npx eslint --init' to set up config file
-     C) Select Check syntax and find problems
-     D) Select JavaScript modules
-     E) Select React
-     F) Select No
-     G) Select Browser
-     H) Select JSON
-     I) Select Yes
+      A) Run 'npm install eslint --save-dev'
+      B) Run 'npx eslint --init' to set up config file
+      C) Select Check syntax and find problems
+      D) Select JavaScript modules
+      E) Select React
+      F) Select No
+      G) Select Browser
+      H) Select JSON
+      I) Select Yes
 
     5. Set up ESLint rules https://eslint.org/docs/rules/
       A) ESLint recommended rules are already implemented
@@ -96,6 +96,15 @@
       C) Enter them in the rules section of eslintrc.json
       D) Find the correct format by looking at the specific rule
 
-    6. Add Tailwindcss
-     A) Run 'npm install tailwindcss@latest'
-     B) Run 'npx tailwindcss init'
+    6. Add Tailwindcss https://tailwindui.com/documentation
+      A) Run 'npm install tailwindcss@latest'
+      B) Run 'npx tailwindcss init'
+
+    7. Add Inter font https://tailwindui.com/documentation
+      A) Add line 'const defaultTheme = require('tailwindcss/defaultTheme' at the top of tailwindconfig file
+      B) Add block
+          'fontFamily: {
+          sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+         },
+       inside of brackets for extends
+      C) 
