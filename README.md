@@ -107,4 +107,7 @@
           sans: ['Inter var', ...defaultTheme.fontFamily.sans],
          },
        inside of brackets for extends
-      C) 
+      C) Add line <link rel="stylesheet" href="https://rsms.me/inter/inter.css"> to head of html page
+
+    8. Using config file
+      A) Add metadata https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/#sitemetadata 
