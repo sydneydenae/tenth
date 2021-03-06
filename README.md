@@ -70,7 +70,15 @@
       F) Scroll down to Branch Protection Rules section
       G) Select 'Add rule'
       F) Type in branch name
-      G) Check the box of 'Require pull request reviews before merging' *I use this to block from submitting to main*
+      G) Check the box of 'Require pull request reviews before merging' and select enable for administrators *I use this to block from submitting to main*
+
+    3. Set up jest test framework https://jestjs.io/docs/en/getting-started.html
+      A) Run 'npm install --save-dev jest'
+      B) Create a sum.js file and insert stuff from supplied directions
+      C) Create a sum.test.js file and insert stuff from supplied directions
+      D) Add  "test": "jest" to scripts section of package.json
+      E) Run 'npm run test'
+
       
 
       
