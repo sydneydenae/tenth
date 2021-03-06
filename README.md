@@ -109,5 +109,10 @@
        inside of brackets for extends
       C) Add line <link rel="stylesheet" href="https://rsms.me/inter/inter.css"> to head of html page
 
-    8. Using config file
+    8. Set up components folder for Tailwind https://bradfrost.com/blog/post/atomic-web-design/
+      A) Create a components folder in src
+      B) Create a subfolder for each of the types of components
+
+    9. Using config file https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
       A) Add metadata https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/#sitemetadata 
+      B) Feel free to add plugins, etc.
