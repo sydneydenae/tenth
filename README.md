@@ -1,17 +1,17 @@
 ## All recorded steps for building Tenth
 
-1. **Create a Gatsby Site** https://www.gatsbyjs.com/docs/quick-start/ 
-      A) Go into local folder with all projects 
-      B) Run `npm init gatsby`
-      C) cd into site
-      D) Run `gatsby build`
-      D) Run `gatsby develop`
-      E) Run `git init`
-      F) Run `git add -A`
-      G) Run `git commit -m "insert message here"`
-      H) Run `git checkout -b newBranchName`
-      I) Run `git remote add origin git@github.com:username/emptyRepoName.git`
-      J) Run `git push origin newBranchName`
+1. **Create a Gatsby Site** https://www.gatsbyjs.com/docs/quick-start/
+      1. Go into local folder with all projects 
+      2. Run `npm init gatsby`
+      3. cd into site
+      4. Run `gatsby build`
+      5. Run `gatsby develop`
+      6. Run `git init`
+      7. Run `git add -A`
+      8. Run `git commit -m "insert message here"`
+      9. Run `git checkout -b newBranchName`
+      10. Run `git remote add origin git@github.com:username/emptyRepoName.git`
+      11. Run `git push origin newBranchName`
 
 2. **Enable branch protection** (I've taken this off for now since I'm the only contributor)
       A) Go to gitHub
