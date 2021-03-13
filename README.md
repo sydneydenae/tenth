@@ -69,9 +69,23 @@
 10. **Begin bubilding UI components** https://tailwindui.com/components#product-application-ui
       1. Button Example
             1. Create a button.js file within the atoms folder
-            2. Build in the skeleton for a typical React export
+            2. Write in the skeleton for a typical React export function
+            ```import React from "react"
+               export default function Button(){
+                 return(
+                  <button type="button" className="inline-flex items-center px-4 py-2 border border-transparent text-sm                   font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none                       focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  Click Me!
+                  </button>
+                  )
+               }```
+               
             3. Copy the code from the component on the Tailwind site (Make sure the extension is on)
             4. Paste code into the JS file
+11. **How to display UI elements**
+      1. Create a *pageName.js* file in the src/pages folder
+      2. Write import *elementName* from *filepath* at the top
+      3. Write in the skeleton for a typical react export function
+      4. Insert <elementName/> in the inside the return parentheses
 
 9. **Using config file** https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
       1. Add metadata https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/#sitemetadata 
