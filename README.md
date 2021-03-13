@@ -54,7 +54,8 @@
 7. **Add Inter font** https://tailwindui.com/documentation
       1. Add line 'const defaultTheme = require('tailwindcss/defaultTheme' at the top of tailwindconfig file
       2. Add block inside of the extends section brackets
-         ```fontFamily: {
+         ```
+         fontFamily: {
          sans: ['Inter var', ...defaultTheme.fontFamily.sans],
          },
       3. Add line `<link rel="stylesheet" href="https://rsms.me/inter/inter.css">` to head of html page
@@ -82,11 +83,43 @@
                   )
                }
                
-11. **How to display UI elements**
+11. **How to display UI elements on a page**
       1. Create a *pageName.js* file in the src/pages folder
       2. Write import *elementName* from *filepath* at the top
       3. Write in the skeleton for a typical react export function
       4. Insert <elementName/> in the inside the return parentheses
+      ```
+      import React from "react"
+      import Button from "../components/atoms/button"
+
+      function TestPage(){
+            return(
+              <div>
+              <title>Test Page</title>
+              <Button/>
+              </div>
+            )
+         }
+      export default TestPage
+      
+12. **Displaying Pages**
+      1. Go to the index.js page
+      2. Import *pageName* from *filePath*
+      3. Write in the skeleton for an index export function
+      4. Insert <pageName/> inside main tags
+      ```
+      import * as React from "react"
+      import TestPage from "./testPage"
+
+      // markup
+      const IndexPage = () => {
+      return (
+            <main>
+                  <TestPage/>
+            </main>
+      )
+      }
+      export default IndexPage
 
 9. **Using config file** https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
       1. Add metadata https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/#sitemetadata 
