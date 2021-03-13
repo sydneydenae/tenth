@@ -54,7 +54,7 @@
 7. **Add Inter font** https://tailwindui.com/documentation
       1. Add line 'const defaultTheme = require('tailwindcss/defaultTheme' at the top of tailwindconfig file
       2. Add block
-         fontFamily: {
+         ```fontFamily: {
          sans: ['Inter var', ...defaultTheme.fontFamily.sans],
          },
        inside of brackets for extends
@@ -70,6 +70,8 @@
       1. Button Example
             1. Create a button.js file within the atoms folder
             2. Write in the skeleton for a typical React export function
+            3. Copy the code from the component on the Tailwind site (Make sure the extension is on)
+            4. Paste code into the JS file
             ```import React from "react"
                export default function Button(){
                  return(
@@ -77,10 +79,8 @@
                   Click Me!
                   </button>
                   )
-               }```
+               }
                
-            3. Copy the code from the component on the Tailwind site (Make sure the extension is on)
-            4. Paste code into the JS file
 11. **How to display UI elements**
       1. Create a *pageName.js* file in the src/pages folder
       2. Write import *elementName* from *filepath* at the top
