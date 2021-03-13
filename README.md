@@ -63,7 +63,18 @@
 8. **Set up components folder for Tailwind** https://bradfrost.com/blog/post/atomic-web-design/
       A) Create a components folder in src
       B) Create a subfolder for each of the types of components
+      
+9. **Install React/Tailwind chrome extension** https://chrome.google.com/webstore/detail/tailwind-ui-react/binfindfddkgfibeajgkmjioklcgigjn?hl=en-US
+
+10. **Begin bubilding UI components** https://tailwindui.com/components#product-application-ui
+      1. Button Example
+            1. Create a button.js file within the atoms folder
+            2. Build in the skeleton for a typical React export
+            3. Copy the code from the component on the Tailwind site (Make sure the extension is on)
+            4. Paste code into the JS file
 
 9. **Using config file** https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
       A) Add metadata https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/#sitemetadata 
       B) Feel free to add plugins, etc.
+      
+
