@@ -53,11 +53,10 @@
 
 7. **Add Inter font** https://tailwindui.com/documentation
       1. Add line 'const defaultTheme = require('tailwindcss/defaultTheme' at the top of tailwindconfig file
-      2. Add block
+      2. Add block inside of the extends section brackets
          ```fontFamily: {
          sans: ['Inter var', ...defaultTheme.fontFamily.sans],
          },
-       inside of brackets for extends
       3. Add line `<link rel="stylesheet" href="https://rsms.me/inter/inter.css">` to head of html page
 
 8. **Set up components folder for Tailwind** https://bradfrost.com/blog/post/atomic-web-design/
