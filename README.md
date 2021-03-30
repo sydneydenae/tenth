@@ -63,6 +63,23 @@
 8. **Set up components folder for Tailwind** https://bradfrost.com/blog/post/atomic-web-design/
       1. Create a components folder in src
       2. Create a subfolder for each of the types of components
+
+9. **Setting up 1st CSS file**
+      1. Create a styles.css file in the src section
+      2. Paste this code
+      ```
+            @tailwind base;
+
+            @tailwind components;
+
+            @tailwind utilities;
+
+10. **Setting up 2nd CSS file and building**
+      1. Create an output.css file in the src/page section
+      2. Go to the package.json and add `"build:css": "tailwind build src/style.css -o src/pages/output.css"` in the scripts section
+      3. Run npm build:css in the terminal
+      4. There should be new code present in the output.css file
+
       
 9. **Install React/Tailwind chrome extension** https://chrome.google.com/webstore/detail/tailwind-ui-react/binfindfddkgfibeajgkmjioklcgigjn?hl=en-US
 
