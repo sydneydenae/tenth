@@ -76,7 +76,7 @@
 
 10. **Setting up 2nd CSS file and building**
       1. Create an output.css file in the src/page section
-      2. Go to the package.json and add `"build:css": "tailwind build src/style.css -o src/pages/output.css"` in the scripts section
+      2. Go to the package.json and add `"build:css": "tailwind build src/style.css -o src/components/pages/output.css"` in the scripts section
       3. Run npm build:css in the terminal
       4. There should be new code present in the output.css file
 

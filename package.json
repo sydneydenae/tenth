@@ -14,7 +14,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest",
-    "build:css": "tailwind build src/style.css -o src/pages/output.css"
+    "build:css": "tailwind build src/style.css -o src/components/pages/output.css"
   },
   "dependencies": {
     "gatsby": "^3.0.1",
