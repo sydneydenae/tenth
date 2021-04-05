@@ -77,8 +77,9 @@
 10. **Setting up 2nd CSS file and building**
       1. Create an output.css file in the src/pages section
       2. Go to the package.json and add `"build:css": "tailwind build src/style.css -o src/pages/output.css"` in the scripts section
-      3. Run npm build:css in the terminal
+      3. Run `npm run build:css in the terminal`
       4. There should be new code present in the output.css file
+      5. Go to index.js file and add the line `import "./output.css"` under the other imports if any
 
       
 9. **Install React/Tailwind chrome extension** https://chrome.google.com/webstore/detail/tailwind-ui-react/binfindfddkgfibeajgkmjioklcgigjn?hl=en-US
@@ -105,6 +106,7 @@
       2. Write import *elementName* from *filepath* at the top
       3. Write in the skeleton for a typical react export function
       4. Insert <elementName/> in the inside the return parentheses
+      5. Repeat this for any elements you'd like to include from the Tailwind site
       ```
       import React from "react"
       import Button from "../components/atoms/button"
@@ -124,9 +126,11 @@
       2. Import *pageName* from *filePath*
       3. Write in the skeleton for an index export function
       4. Insert <pageName/> inside main tags
+      5. Make sure the output.css file is imported into the page
       ```
       import * as React from "react"
       import TestPage from "./testPage"
+      import "./output.css"
 
       // markup
       const IndexPage = () => {
