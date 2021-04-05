@@ -10,6 +10,9 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        'MASTERMND-blue': '#1481BA',
+      },
     },
   },
 
