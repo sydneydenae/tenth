@@ -82,9 +82,9 @@
       5. Go to index.js file and add the line `import "./output.css"` under the other imports if any
 
       
-9. **Install React/Tailwind chrome extension** https://chrome.google.com/webstore/detail/tailwind-ui-react/binfindfddkgfibeajgkmjioklcgigjn?hl=en-US
+11. **Install React/Tailwind chrome extension** https://chrome.google.com/webstore/detail/tailwind-ui-react/binfindfddkgfibeajgkmjioklcgigjn?hl=en-US
 
-10. **Begin bubilding UI components** https://tailwindui.com/components#product-application-ui
+12. **Begin bubilding UI components** https://tailwindui.com/components#product-application-ui
       1. Button Example
             1. Create a button.js file within the atoms folder
             2. Write in the skeleton for a typical React export function
@@ -101,7 +101,7 @@
                   )
                }
                
-11. **How to display UI elements on a page**
+13. **How to display UI elements on a page**
       1. Create a *pageName.js* file in the src/pages folder
       2. Write import *elementName* from *filepath* at the top
       3. Write in the skeleton for a typical react export function
@@ -121,7 +121,7 @@
          }
       export default TestPage
       
-12. **Displaying Pages**
+14. **Displaying Pages**
       1. Go to the index.js page
       2. Import *pageName* from *filePath*
       3. Write in the skeleton for an index export function
@@ -142,8 +142,38 @@
       }
       export default IndexPage
 
-9. **Using config file** https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
+15. **Using config file** https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
       1. Add metadata https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/#sitemetadata 
       2. Feel free to add plugins, etc.
-      
+
+16. Creating Custom Tailwind Colors
+      1. Go to https://www.tailwindshades.com/ 
+      2. Insert hex for the base color
+      3. Copy Tailwind code for the color in section 3 called "Get Code"
+
+17. **Adding Custom colors**    
+      1. Go to the tailwindconfig.js file
+      2. Find the extends section within the theme section
+      3. create a colors section ithin the extends section
+      4. Paste color code in the section
+      5. Change the name if necessary
+      6. Re-build the css and launch the site again
+      7. Use them the same way you would other colors
+      ```
+      colors: {
+        'mmb': {
+          DEFAULT: '#1481BA',
+          '50': '#BCE3F8',
+          '100': '#A5DAF5',
+          '200': '#77C7F0',
+          '300': '#49B3EB',
+          '400': '#1BA0E6',
+          '500': '#1481BA',
+          '600': '#0F618C',
+          '700': '#0A415E',
+          '800': '#052130',
+          '900': '#000102'
+        },
+      },
+
 
