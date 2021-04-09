@@ -23,6 +23,11 @@
       7. Type in branch name
       8. Check the box of 'Require pull request reviews before merging' and select enable for administrators *I use this to block from submitting to main*
 
+3. Create .nvmrc file
+      1. Create a file in the main Cerebro folder called .nvmrc
+      2. On line 1 write `14.16.0` or whatever the stabe version of node is at the time
+      3. All done! When opening up the project, run `nvm install` and then `nvm use` to ensure you're using the right version
+
 3. **Set up jest test framework** https://jestjs.io/docs/en/getting-started.html
       1. Run `npm install --save-dev jest`
       2. Create a sum.js file and insert stuff from supplied directions
