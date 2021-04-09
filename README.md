@@ -23,7 +23,7 @@
       7. Type in branch name
       8. Check the box of 'Require pull request reviews before merging' and select enable for administrators *I use this to block from submitting to main*
 
-3. Create .nvmrc file
+3. **Create .nvmrc file**
       1. Create a file in the main Cerebro folder called .nvmrc
       2. On line 1 write `14.16.0` or whatever the stabe version of node is at the time
       3. All done! When opening up the project, run `nvm install` and then `nvm use` to ensure you're using the right version
@@ -181,4 +181,32 @@
         },
       },
 
+18. **Testing Components with Jest: Unit testing setup** https://www.gatsbyjs.com/docs/how-to/testing/unit-testing
+      1. Follow linked guide to set up jest with Gatsby (Stop right before step 3)
+      2. Create a component.test.js file in tha same folder as whatever component you are testing
+      3. Import react, the component, and the renderer as shown below
+      4. Create a section called `describe("*componentName*", () =>{*tests go here*})` to hold all tests for button
+      ```
+      *in button.test.js file*
+      import React from "react"
+      import Button from "./button"
+      import renderer from "react-test-renderer"
+
+      describe("Button", () => {
+    
+      })
+
+19. **Testing Components with Jest: Snapshot testing** https://www.gatsbyjs.com/docs/how-to/testing/unit-testing 
+      1. Jump to the bolded "Writing Tests" section within section 3 of the Gatsby tutoriral
+      2. Go to the testing file set up in the previous section
+      3. Create a section within the describe section called `it("*whatever this test proves*", () => {*snapshot testing code*})`
+      ```
+      describe("Button", () => {
+            it("renders correctly", () => {
+                  const tree = renderer
+                  .create(<Button />)
+                  .toJSON()
+               expect(tree).toMatchSnapshot()
+            })
+       })
 
