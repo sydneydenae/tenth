@@ -52,9 +52,24 @@
       3. Enter them in the rules section of eslintrc.json
       4. Find the correct format by looking at the specific rule
 
-6. **Add Tailwindcss** https://tailwindui.com/documentation
+6. **Add Tailwindcss** https://tailwindui.com/documentation https://www.gatsbyjs.com/docs/how-to/styling/tailwind-css/ 
       1. Run `npm install tailwindcss@latest`
       2. Run `npx tailwindcss init`
+      3. Run `npm install postcss gatsby-plugin-postcss`
+      4. Add the plugin to gatsby-config.js file
+      ```
+      *gatsby-config.js file*
+      module.exports = {
+      siteMetadata: {
+            title: `Tenth`,
+            siteUrl: `https://www.tenth.com`,
+            description: `A website about the top 10%`,
+            },
+
+      plugins: [
+            `gatsby-plugin-postcss`
+      ],
+      }
 
 7. **Add Inter font** https://tailwindui.com/documentation
       1. Add line 'const defaultTheme = require('tailwindcss/defaultTheme' at the top of tailwindconfig file
@@ -159,7 +174,7 @@
 17. **Adding Custom colors**    
       1. Go to the tailwindconfig.js file
       2. Find the extends section within the theme section
-      3. create a colors section ithin the extends section
+      3. create a colors section within the extends section
       4. Paste color code in the section
       5. Change the name if necessary
       6. Re-build the css and launch the site again
@@ -181,25 +196,47 @@
         },
       },
 
-18. **Testing Components with Jest: Unit testing setup** https://www.gatsbyjs.com/docs/how-to/testing/unit-testing
-      1. Follow linked guide to set up jest with Gatsby (Stop right before step 3)
-      2. Create a component.test.js file in tha same folder as whatever component you are testing
+18. **Testing Components with Jest: Unit testing setup** https://www.gatsbyjs.com/docs/how-to/testing/unit-testing 
+      1. Follow linked guide to set up jest with Gatsby (Stop right before step 3 and you don't need to do anything with creating a mock folder or mock files)
+      2. Follow this guide to set testing for React components https://www.gatsbyjs.com/docs/how-to/testing/testing-react-components/ (Stop when you reach 'Usage' section)
+      3. It get's a little confusing so I will provide a sample of what your jest.config.js file should look like below
+      2. Create a component.test.js file in the same folder as whatever component you are testing
       3. Import react, the component, and the renderer as shown below
       4. Create a section called `describe("*componentName*", () =>{*tests go here*})` to hold all tests for button
       ```
+      *jest.config.js file*
+      module.exports = {
+            transform: {
+                  "^.+\\.jsx?$": `<rootDir>/jest-preprocess.js`,
+            },
+            moduleNameMapper: {
+                  ".+\\.(css|styl|less|sass|scss)$": `identity-obj-proxy`,
+                  ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": `<rootDir>/__mocks__/file-mock.js`,
+            },
+            testPathIgnorePatterns: [`node_modules`, `\\.cache`, `<rootDir>.*/public`],
+            transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`],
+            globals: {
+                  __PATH_PREFIX__: ``,
+            },
+            testURL: `http://localhost`,
+            setupFiles: [`<rootDir>/loadershim.js`],
+            setupFilesAfterEnv: ["<rootDir>/setup-test-env.js"],
+      } 
+
       *in button.test.js file*
       import React from "react"
       import Button from "./button"
-      import renderer from "react-test-renderer"
+      import { render } from "@testing-library/react"
 
       describe("Button", () => {
     
       })
 
-19. **Testing Components with Jest: Snapshot testing** https://www.gatsbyjs.com/docs/how-to/testing/unit-testing 
+19. **Testing Components with Jest: Snapshot testing** https://www.gatsbyjs.com/docs/how-to/testing/unit-testing https://www.robinwieruch.de/react-testing-library 
       1. Jump to the bolded "Writing Tests" section within section 3 of the Gatsby tutoriral
       2. Go to the testing file set up in the previous section
       3. Create a section within the describe section called `it("*whatever this test proves*", () => {*snapshot testing code*})`
+      4. Use npm run test to run the test
       ```
       describe("Button", () => {
             it("renders correctly", () => {

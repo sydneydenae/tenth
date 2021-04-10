@@ -1,12 +1,13 @@
 import React from "react"
 import Button from "./button"
-import renderer from "react-test-renderer"
+import { render, screen } from "@testing-library/react"
 
-describe("Button", () => {
-    it("renders correctly", () => {
-      const tree = renderer
-        .create(<Button />)
-        .toJSON()
-      expect(tree).toMatchSnapshot()
-    })
+  describe("Button", () => {
+     test('renders Button component', () => {
+        render(<Button />);
+
+        screen.debug();
+        expect(screen.getByText(/Click Me!/)).toBeInTheDocument();
+        expect(screen.getByRole(`button`)).toBeInTheDocument();
+    });
   })
