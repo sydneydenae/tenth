@@ -1,5 +1,6 @@
 import * as React from "react"
-import TestPage from "./testPage"
+import TestPage from "../components/pages/testPage"
+import "./output.css"
 
 // markup
 const IndexPage = () => {
