@@ -232,18 +232,20 @@
     
       })
 
-19. **Testing Components with Jest: Snapshot testing** https://www.gatsbyjs.com/docs/how-to/testing/unit-testing https://www.robinwieruch.de/react-testing-library 
-      1. Jump to the bolded "Writing Tests" section within section 3 of the Gatsby tutoriral
-      2. Go to the testing file set up in the previous section
-      3. Create a section within the describe section called `it("*whatever this test proves*", () => {*snapshot testing code*})`
-      4. Use npm run test to run the test
+19. **Testing Components with Jest**  https://www.robinwieruch.de/react-testing-library 
+      1. Read through the article and employ necessary tests
       ```
+      import React from "react"
+      import Button from "./button"
+      import { render, screen } from "@testing-library/react"
+
       describe("Button", () => {
-            it("renders correctly", () => {
-                  const tree = renderer
-                  .create(<Button />)
-                  .toJSON()
-               expect(tree).toMatchSnapshot()
-            })
-       })
+      test('renders Button component', () => {
+            render(<Button />);
+
+            screen.debug();
+            expect(screen.getByText(/Click Me!/)).toBeInTheDocument();
+            expect(screen.getByRole(`button`)).toBeInTheDocument();
+      });
+      })
 
