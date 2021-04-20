@@ -1,3 +1,13 @@
+## What to run
+1. nvm install
+2. nvm use
+3. npm install
+4. npm run build
+5. npm test
+6. npm start
+
+
+
 ## All recorded steps for building Tenth
 
 1. **Create a Gatsby Site** https://www.gatsbyjs.com/docs/quick-start/
