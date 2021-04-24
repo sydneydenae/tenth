@@ -130,6 +130,52 @@
                   </button>
                   )
                }
+
+13. **Creating a data page for props**
+      1. Create a buttonData.js page in the same folder as button.js
+      2. Insert any props you want inside these brackets {}
+      ```
+      const buttonData = [
+            {
+            id: 1,
+            title: "Button",
+            link: "https://www.mastermnd.io/"
+            }
+      ]
+      export default buttonData
+
+14. **How to use props in an element**
+      1. Go to the button.js page
+      2. Wherever you want to place the prop value insert {prop.*name of attribute*}
+      ```
+      export default function Button(props){
+            return(
+            <button type="button" className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-mmb-500 hover:bg-mmb-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mmb-500">
+            < a href={props.link}>{props.title}</a>
+            </button>
+            )
+      }
+
+15. **Calling an element with props**
+      1. When on the page you'd like to display the element, import the element and its data page
+      2. When you call the element, include a key to call the props as well
+      3. Since the keys zero indexed, anything in the first group would be called with buttonData[0].attribute
+      4. Set the key={buttonData[0].id}
+      ```
+      import React from "react"
+      import ButtonComp from "../Components/Atoms/Button"
+      import buttonCompData from "../Components/Atoms/ButtonCompData"
+
+      function TestPage() {
+            return (
+                  <div>
+                  <h1>Hello World</h1>
+                  <ButtonComp  key={buttonData[0].id} title={buttonCompData[0].title} link={buttonCompData[0].link}/>
+                  </div>
+            )
+      }
+
+export default TestPage
                
 13. **How to display UI elements on a page**
       1. Create a *pageName.js* file in the src/pages folder
