@@ -125,11 +125,16 @@
             
                export default function Button(){
                  return(
-                  <button type="button" className="inline-flex items-center px-4 py-2 border border-transparent text-sm                   font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none                       focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  <button type="button" className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                   Click Me!
                   </button>
                   )
                }
+
+13. **Adding attributes to elements**
+      1. Some attruibutes I added to the button element were a placeholder and data-testid (which we'll need later)
+      2. To add a placeholder insert placeholder="Click Me!" (or any message you desire) after the opening tag for button
+      3. To add a data test id insert data-testid="default-button" (or whatever you want to call it) after the opening tag for button
 
 13. **Creating a data page for props**
       1. Create a buttonData.js page in the same folder as button.js
@@ -163,8 +168,8 @@
       4. Set the key={buttonData[0].id}
       ```
       import React from "react"
-      import ButtonComp from "../Components/Atoms/Button"
-      import buttonCompData from "../Components/Atoms/ButtonCompData"
+      import Button from "../Components/Atoms/button"
+      import buttonData from "../Components/Atoms/buttonData"
 
       function TestPage() {
             return (
@@ -180,18 +185,20 @@ export default TestPage
 13. **How to display UI elements on a page**
       1. Create a *pageName.js* file in the src/pages folder
       2. Write import *elementName* from *filepath* at the top
+      3. Import the data file for that element if props were used
       3. Write in the skeleton for a typical react export function
       4. Insert <elementName/> in the inside the return parentheses
       5. Repeat this for any elements you'd like to include from the Tailwind site
       ```
       import React from "react"
-      import Button from "../components/atoms/button"
+      import Button from "../atoms/button"
+      import buttonData from "../atoms/buttonData"
 
       function TestPage(){
             return(
               <div>
               <title>Test Page</title>
-              <Button/>
+              <ButtonComp  key={buttonData[0].id} title={buttonCompData[0].title} link={buttonCompData[0].link}/>
               </div>
             )
          }
@@ -222,7 +229,7 @@ export default TestPage
       1. Add metadata https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/#sitemetadata 
       2. Feel free to add plugins, etc.
 
-16. Creating Custom Tailwind Colors
+16. **Creating Custom Tailwind Colors**
       1. Go to https://www.tailwindshades.com/ 
       2. Insert hex for the base color
       3. Copy Tailwind code for the color in section 3 called "Get Code"
@@ -288,20 +295,30 @@ export default TestPage
     
       })
 
-19. **Testing Components with Jest**  https://www.robinwieruch.de/react-testing-library 
-      1. Read through the article and employ necessary tests
+19. **Testing Components with Jest**  
+      1. Read through the article and employ necessary tests https://www.robinwieruch.de/react-testing-library 
+      2. Cheatsheet for tests https://testing-library.com/docs/react-testing-library/cheatsheet 
+      3. You can use these matchers to extend the tests https://github.com/testing-library/jest-dom 
+      4. I've inserted an example of how I've used jest tests to test the button (these tests will fail unless you've added the custom color, placeholder, and data-testid)
       ```
       import React from "react"
       import Button from "./button"
       import { render, screen } from "@testing-library/react"
 
       describe("Button", () => {
-      test('renders Button component', () => {
-            render(<Button />);
-
-            screen.debug();
-            expect(screen.getByText(/Click Me!/)).toBeInTheDocument();
-            expect(screen.getByRole(`button`)).toBeInTheDocument();
-      });
+            test('Button is of type button', () => {
+                  render(<Button />);
+                  screen.debug();
+                  expect(screen.getByRole(`button`)).toBeInTheDocument();
+            });
+            test('Button has correct placeholder', () => {
+                  render(<Button />);
+                  screen.debug();
+                  expect(screen.getByPlaceholderText(`Click Me!`)).toBeInTheDocument();
+            });
+            test("Button has correct color", () => {
+                  const { getByTestId } = render(<Button />)
+                  expect(getByTestId("default-button")).toHaveClass(`bg-mmb-500`)
+            });
       })
 
