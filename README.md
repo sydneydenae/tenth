@@ -6,6 +6,13 @@
 5. npm test
 6. npm start
 
+## Technologies used 🛠️
+
+- [Gatsby](https://www.gatsbyjs.org/) - Static Site Generator
+- [React](https://es.reactjs.org/) - Front-End JavaScript library
+- [Jest](https://www.jestjs.io/) - JavaScript Testing Framework
+- [ESLint](https://www.eslint.org/) - Linter; Identifying and reporting on patterns
+- [TailwindUI](https://tailwindui.com/) - CSS Framework
 
 
 ## All recorded steps for building Tenth
