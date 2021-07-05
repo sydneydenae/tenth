@@ -1,12 +1,14 @@
 import * as React from "react"
-import TestPage from "../components/pages/testPage"
-import "./output.css"
+import Navbar from "../components/organisms/Navbar"
+import '../styles/global.css'
+
+
 
 // markup
 const IndexPage = () => {
   return (
     <main>
-      <TestPage/>
+     <Navbar/>
     </main>
   )
 }
