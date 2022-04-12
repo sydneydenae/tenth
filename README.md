@@ -57,7 +57,7 @@
       2. Run `npx tailwindcss init`
 
 7. **Add Inter font** https://tailwindui.com/documentation
-      1. Add line 'const defaultTheme = require('tailwindcss/defaultTheme' at the top of tailwindconfig file
+      1. Add line 'const defaultTheme = require('tailwindcss/defaultTheme')' at the top of tailwindconfig file
       2. Add block inside of the extends section brackets
          ```
          fontFamily: {
